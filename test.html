@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link rel="stylesheet" href="./css/frame.css">
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+</head>
+<body class="bg-g4 overf">
+    <!-- estrutctura general -->
+    <header class="bg-g1  w100">
+        <div class="container padhor-1 w100 mgauto">
+            <nav class="gap1">
+                <div class="menu-icons">
+                    <i class="icon ion-md-menu clr-n"></i>
+                    <i class="icon ion-md-close"></i>
+                </div>
+                <a href="index.html" class="logo padding05 flex">
+                    <img src="./img/LOGO.png" alt="">
+                </a>
+                <ul class="nav-list w100 flex-spacebetween mayus f-bold">
+                    <div class="flex-c-resp gap1 flex-a clr-n">
+                        <li class="rel">
+                            <a href="index.html">Inicio</a>
+                        </li>
+                        <!-- <li>
+                        <a href="#">Menu
+                            <ion-icon name="caret-down-outline"></ion-icon>
+                        </a>
+                        <ul class="sub-menu">
+                            <li><a href="#">Breakfast</a></li>
+                            <li>
+                                <a href="#">Lunch
+                                    <ion-icon name="caret-down-outline"></ion-icon>
+                                </a>
+                                <ul class="sub-menu">
+                                    <li><a href="#">Food</a></li>
+                                    <li><a href="#">Food</a></li>
+                                    <li>
+                                        <a href="#">More...
+                                            <ion-icon name="caret-down-outline"></ion-icon>
+                                        </a>
+                                        <ul class="sub-menu">
+                                            <li><a href="#">Food</a></li>
+                                            <li><a href="#">Food</a></li>
+                                            <li><a href="#">Food</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Dinner</a></li>
+                        </ul>
+                    </li> -->
+                        <li class="rel">
+                            <a href="premios.html">Premios</a>
+                        </li>
+                        <li class="rel">
+                            <a href="beneficios.html">Beneficios</a>
+                        </li>
+                        <li class="rel">
+                            <a href="ganadores.html">Ganadores</a>
+                        </li>
+                    </div>
+                    <div class="flex-c-resp gap1"> 
+                        <li class="move-right btn flex-centro border3px brdclr-n f-bold w-maxc padhor-1-2 border20">
+                            <a href="login.html">Iniciar Sesión</a>
+                            
+                        </li>
+                        <li class="move-right btn flex-centro border3px bg-verd  brdclr-n f-bold w-maxc padhor-1-2 border20">
+                            <a href="#suscripcion">Suscribete</a>
+                        </li>
+                    </div>
+                </ul>
+                
+            </nav>
+        </div>
+    </header>
+    <main class="h-maxc bg-g2 ">
+        <!-- Columna 5 - 2 Columna -->
+        <section class="padsup-2 mgauto" alt="banner">
+            <div class="padhor-1 ">
+                <!-- contenido -->
+                <div class="w100 bg-g1 mw-72 mgauto padhor-1 border20">
+                    <div class="padsup-2 flex-c-resp flex-c gapresp1">
+                    <!-- contenido Banner -->
+                        <div class="flex-colum flex-centro gap-5 w100 mw-450 txt-centro">
+                            <h1>¡Participa en Nuestro Sorteo Mensual!</h1>
+                            <h3 class="tac">Descubre la emoción de ganar premios increíbles. ¿Listo para ser el próximo afortunado?</h3>
+                            <a class="padhor-1-2 border20 mgtp2 bg-verd border3px f-bold w-maxc" href="#suscripcion">Suscríbete Ahora</a>
+                        </div>
+                        <div class="rel flex-c mgtp2 w100 mw-450">
+                            <img class="w100 mw-8res abs lef0 z-rt-355" src="./img/iphone-12-azul.png" alt="">
+                            <img class="w100 mw-8res abs right0 z-rt-5" src="./img/iphone-13-pro-max-3.png" alt="">
+                            <img class="w100 w18-res zindex3" src="./img/04-iphone-13-pro-max-1tb-gris-front.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="padsup-2 flex-c mgauto bg-n rel" alt="sgtSORTEO">
+            <div class="padhor-1 pdngbot3 mw-52 mgauto txt-centro ">
+                <!-- contenido -->
+                <div class="w100 pdngbot2 border20 clr-b">
+                    <!-- contenido Banner -->
+                   <h2>No Te Pierdas la Oportunidad <br> Sorteo Mensual de Celulares</h2>
+                   <h3 class="f-bold">¿Listo para Ser el Afortunado?</h3>
+                </div>
+            </div>
+            <div class="abs flex-c-resp bg-b mw-580 w90 bot-1_25 gap1 flex-centro padding1 border20">
+                <!-- conteo -->
+                        <div class="w100 flex-colum gap-5" id="clockdiv">
+                             <h3 class="time_messege "><b>Próxima Edición En: </b>
+                             </h3>
+                            <div class="flex-centro gap-5">
+                                <div class="bg-3 padding03 border05">
+                                   <div class="smalltext text-capitalize">Días</div>
+                                   <span class="days "></span>
+                                </div>
+                                <div class="bg-3 padding03 border05">
+                                   <div class="smalltext text-capitalize">Horas</div>
+                                   <span class="hours "></span>
+                                </div>
+                                <div class="bg-3 padding03 border05">
+                                   <div class="smalltext text-capitalize ">Min</div>
+                                   <span class="minutes "></span>
+                                </div>
+                                <div class="bg-3 padding03 border05">
+                                   <div class="smalltext text-capitalize ">Seg</div>
+                                   <span class="seconds "></span>
+                                </div>
+                                
+                            </div>
+                            <!-- <div><a href="#" class="footr_buy font_Inter_Black">BUY NOW</a></div> -->
+                        </div>
+              
+              <!-- conteo -->
+            </div>
+        </section>
+        <section class="">
+            <div class="">
+                <!-- contenido -->
+                <div class="w100 flex-c-resp">
+                    <!-- contenido Banner -->
+                    <div class="bg-g1 w100 ">
+                        <div class="mgt-120 flex-c">
+                            <div class="flex-colum mgb-68 padding1 mw-450 txt-c-l">
+                                <h2>¡Embárcate en la Aventura de Ganar!</h2>
+                                <h3>Descubre la emoción de poseer el último celular de tus sueños</h3>
+                                <p>Presiona el botón de abajo para suscribirte ahora y asegurar tu oportunidad de ganar. No dejes que esta oportunidad única pase de largo. ¡Tu nuevo celular te espera!"</p>
+                                <a class="padhor-1-2 border20 mgtp2 bg-verd border3px f-bold w-maxc" href="#suscripcion">Suscríbete Ahora</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-none-resp bg-4 w100">
+                        <div class="padding1 flex-centro mgtp-4">
+                            <img class="w100 mw-380" src="https://assets-global.website-files.com/6493f25e63b5e98441980d87/64dcf4098286e31f685fdf1e_Group%20180.png" alt="imagen-banner">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="padsup-2 mgauto bg-2">
+            <div class="padhor-1 ">
+                <!-- contenido -->
+                <div class="w100 padding1 txt-centro flex-colum flex-centro gap1">
+                    <!-- contenido Banner -->
+                    <h2 class="clr-b">Nuestros Premios</h2>
+                    <p class="clr-b">Cada me ofrecemos los mejores premios que tenemos para ti</p>
+                    <div class="grid mw-72 w100 place-content place-item gap1-5 mgauto mgtp2">
+                        
+                        <div class="w100 bg-3 aspect-1 padsup-1 border20">
+                            <div class="w100 padding1 flex-centro gap1-5 flex-colum">
+                                <img class="w100 mw-150" src="./img/iphone-12-azul.png" alt="">
+                                <div class="padop1 w-maxc border20 brdclr-n border2px f-bold">
+                                    <p>Iphone 12</p> 
+                                </div> 
+                            </div>
+                        </div>
+                        <div class="w100 bg-3 aspect-1 padsup-1 border20">
+                            <div class="w100 padding1 flex-centro gap1-5 flex-colum">
+                                <img class="w100 mw-150" src="./img/iphone-13-pro-max-3.png" alt="">
+                                <div class="padop1 w-maxc border20 brdclr-n border2px f-bold">
+                                    <p>Iphone 13 pro max</p>
+                                </div> 
+                            </div>
+                        </div>
+                        <div class="w100 bg-3 aspect-1 padsup-1 d-none-resp border20">
+                            <div class="w100 padding1 flex-centro gap1-5 flex-colum">
+                                <img class="w100 mw-150" src="./img/iPhone_14_Pro_Max_Space_Black_Pure_Front.png" alt=""> 
+                                <div class="padop1 w-maxc border20 brdclr-n border2px f-bold">
+                                    <p>Iphone 14 pro max</p> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="padhor-1-2 border20 mgtp2 bg-verd border3px f-bold w-maxc" href="#suscripcion">Suscríbete Ahora</a>
+                </div>
+            </div>
+        </section>
+        
+        <section class="padsup-2 mgauto bg-b" id="suscripcion">
+            <div class="padhor-1 ">
+                <!-- contenido -->
+                <div class="w100 padding1 txt-centro flex-colum flex-centro gap1">
+                    <!-- contenido Banner -->
+                    <h2>Nuestros Planes</h2>
+                    <p>Cada me ofrecemos los mejores premios que tenemos para ti</p>
+                    <div class="grid mw-72 w100 place-content place-item gap1-5 mgauto mgtp2">
+                        <div class="w100 bg-3 padsup-2 border5px brdclr-n border20">
+                            <div class="w100 padding1 flex-colum gap1 flex-centro">
+                                <div class="flex-spacearound flex-a gap2">
+                                    <div>
+                                        <p>Suscripción</p>
+                                        <h2>Bronze</h2>    
+                                    </div>    
+                                    <div class="mw-ico-4 bordercircular">
+                                        <img class="w100" src="./img/bronze.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="flex-c gap-5">
+                                    <p class="h-fit">s/</p>
+                                    <span class="fs-4 f-bold h-fit lnh-1">8</span>
+                                    <div class="flex-c flex-colum">
+                                        <p>soles</p>
+                                        <p>MENSUAL</p>    
+                                    </div>    
+                                </div>
+                                
+                                   
+                                <p>Participación en todos los premios disponibles dentro del mes</p>
+                                <a class="padhor-1-2 border20 mgtp2 bg-verd border3px f-bold w-maxc" href="#suscripcion">Suscríbete Ahora</a>
+                            </div>
+                        </div>
+                        <div class="w100 bg-3 padsup-2 border5px brdclr-n border20" id="seccion-suscripcion">
+                            <div class="w100 padding1 flex-colum gap1 flex-centro">
+                                <div class="flex-spacearound flex-a gap2">
+                                    <div>
+                                        <p>Suscripción</p>
+                                        <h2>Silver</h2>    
+                                    </div>    
+                                    <div class="mw-ico-4 bordercircular">
+                                        <img class="w100" src="./img/silver.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="flex-c gap-5">
+                                    <p class="h-fit">s/</p>
+                                    <span class="fs-4 f-bold h-fit lnh-1">21</span>
+                                    <div class="flex-c flex-colum">
+                                        <p>soles</p>
+                                        <p>SEMESTRAL</p>    
+                                    </div>    
+                                </div>
+                                
+                                   
+                                <p>Participación en todos los premios disponibles dentro de los 6 meses</p>
+                                <a class="padhor-1-2 border20 mgtp2 bg-verd border3px f-bold w-maxc" href="#suscripcion">Suscríbete Ahora</a>
+                            </div>
+                        </div>
+                        <div class="w100 bg-3 padsup-2 border5px brdclr-n border20">
+                            <div class="w100 padding1 flex-colum gap1 flex-centro">
+                                <div class="flex-spacearound flex-a gap2">
+                                    <div>
+                                        <p>Suscripción</p>
+                                        <h2>Golden</h2>    
+                                    </div>    
+                                    <div class="mw-ico-4 bordercircular bg-2">
+                                        <img class="w100" src="./img/gold.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="flex-c gap-5">
+                                    <p class="h-fit">s/</p>
+                                    <span class="fs-4 f-bold h-fit lnh-1">60</span>
+                                    <div class="flex-c flex-colum">
+                                        <p>soles</p>
+                                        <p>ANUAL</p>    
+                                    </div>    
+                                </div>
+                                
+                                   
+                                <p>Participación en todos los premios disponibles dentro del año</p>
+                                <a class="padhor-1-2 border20 mgtp2 bg-verd border3px f-bold w-maxc" href="#suscripcion">Suscríbete Ahora</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+            </div>
+        </section>
+        <section class="padsup-2 mgauto bg-2">
+            <div class="padhor-1 ">
+                <!-- contenido -->
+                <div class="w100 border20 mw-72 mgauto txt-centro">
+                    <!-- contenido Banner -->
+                    <h2 class="clr-b">Preguntas Frecuentes</h2>
+                    <div class="w100 mgauto rel flex-colum gap1 mgtp2 sombra">
+            
+                        <div class="topic bg-b border2px brdclr-n padding1">
+                            <div class="open">
+                              <p class="question">¿Cómo funciona el sorteo mensual?</p>
+                              <span class="faq-t"></span>
+                            </div>
+                            <p class="answer">Nuestro sorteo mensual es sencillo. Al suscribirte, recibirás automáticamente una o más participaciones, dependiendo de tu plan. Durante el sorteo mensual, seleccionamos aleatoriamente a un ganador de entre todos los participantes.</p>
+                          </div>
+                       
+                          <div class="topic bg-b border2px brdclr-n padding1">
+                            <div class="open">
+                            <p class="question">¿Cuáles son los premios disponibles?
+                        </p><span class="faq-t"></span>
+                            </div>
+                            <p class="answer">Los premios varían cada mes e incluyen celulares de última generación, motocicletas, automóviles, electrodomésticos y más. Puedes encontrar información detallada sobre los premios actuales en nuestra página principal.</p>
+                          </div>
+                          <div class="topic bg-b border2px brdclr-n padding1">
+                            <div class="open">
+                            <p class="question">¿Cómo me suscribo?
+                        </p><span class="faq-t"></span>
+                            </div>
+                            <p class="answer">Es fácil. Visita nuestra sección de <a href="#seccion-suscripcion">suscripción</a>, elige el plan que más te convenga y sigue los pasos para completar el proceso de suscripción. Una vez suscrito, estás automáticamente participando en el próximo sorteo.</p>
+                          </div>
+                       
+                      </div>
+                </div>
+            </div>
+        </section>
+        <!-- <section class="padsup-2 mgauto bg-4">
+            <div class="padhor-1 ">
+                
+                <div class="w100 padding1 border20">
+                    
+                    <p>plantilla</p>
+                </div>
+                
+            </div>
+        </section>
+        <section class="padsup-2 mgauto bg-3">
+            <div class="padhor-1 ">
+                
+                <div class="w100 padding1 border20">
+                    
+                    <h2>Nuestros Premios</h2>
+                    <p>Cada me ofrecemos los mejores premios que tenemos para ti</p>
+                </div>
+                
+            </div>
+        </section> -->
+    </main>
+    <!-- estrutctura general -->
+    <!-- navegador mobil -->
+    <!-- navegador mobil -->
+    <!-- modals -->
+    <!-- scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="./js/countdown.js"></script>
+    <script src="./js/modal.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.js"></script>
+    <script>
+        //Create function to select elements
+        //Open and close nav on click
+        const menuIcon = document.querySelector(".menu-icons");
+        menuIcon.addEventListener("click", () => {
+            console.log("OK");
+            const nav = document.getElementsByTagName("nav")[0];
+            nav.classList.toggle("active");
+        });
+        
+    </script>
+    <script>
+        $(".open").click( function () {
+        var container = $(this).parents(".topic");
+        var answer = container.find(".answer");
+        var trigger = container.find(".faq-t");
+            
+        answer.slideToggle(200);
+            
+        if (trigger.hasClass("faq-o")) {
+        trigger.removeClass("faq-o");
+        }
+        else {
+        trigger.addClass("faq-o");
+        }
+
+        if (container.hasClass("expanded")) {
+        container.removeClass("expanded");
+        }
+        else {
+        container.addClass("expanded");
+        }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Last-Modified" content="0">
+    <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <title>Inicio</title>
+    <link rel="stylesheet" href="./css/frame.css">
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+    <style>
+        .modalvideo {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modalvideo-content {
+    position: relative;
+    width: 95%;
+    max-width: 800px;
+}
+
+.closevideo {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #aaa;
+    cursor: pointer;
+}
+
+.closevideo:hover {
+    color: #555;
+}
+
+#videoIframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+}
+    </style>
+</head>
+<body>
+    <!-- estrutctura general -->
+    <section class="h-2em bg-g4"></section>
+    <header class="bg-b w100">
+        <div class="container padhor-1 w100 mgauto">
+            <nav class="gap1">
+                <div class="menu-icons">
+                    <i class="icon ion-md-menu clr-n"></i>
+                    <i class="icon ion-md-close"></i>
+                </div>
+                <a href="index.html" class="logo padding05 flex-centro">
+                    <img class="w80" src="https://tortaza.com.pe/Assets/tienda/images/webp/logo_tortaza.webp" alt="">
+                </a>
+                <ul class="nav-list w100 flex-spacebetween mayus f-bold">
+                    <div class="flex-c-resp gap1 flex-a clr-n">
+                        <li class="rel">
+                            <a href="index.html">Inicio</a>
+                        </li>
+                        <li class="rel">
+                            <a href="premios.html">Premios</a>
+                        </li>
+                        <li class="rel">
+                            <a href="ganadores.html">Ganadores</a>
+                        </li>
+                    </div>
+                    <div class="flex-c-resp gap1"> 
+                        <li class="move-right btn flex-centro border3px brdclr-n f-bold w-maxc padhor-1-2 border20">
+                            <a href="login.html">Iniciar Sesión</a>
+                            
+                        </li>
+                        <li class="move-right btn flex-centro border3px bg-verd  brdclr-n f-bold w-maxc padhor-1-2 border20">
+                            <a href="crearcuenta.html">Suscribete</a>
+                        </li>
+                        <li class="hidden mw-ico-3 bg-1 bordercircular flex-centro">
+                            <a href="#" class="w100 h100">
+                                <img src="" alt="">
+                            </a>
+                        </li>
+                    </div>
+                </ul>
+                
+            </nav>
+        </div>
+    </header>
+    <main class="h-maxc bg-b ">
+        <!-- Columna 5 - 2 Columna -->
+        <section class="padsup-2 mgauto" alt="banner">
+            <div class="padhor-1 ">
+                <!-- contenido -->
+                <div class="w100 mw-72 mgauto border20">
+                    <div class="padsup-2 gridcol1-2-resp gapresp1">
+                    <!-- contenido Banner -->
+                        <div class="flex-colum flex-c mgauto gap1 w100 mw-580 txt-centro">
+                            <h1 class="txt-der">¡Tortas con amor en cada capa!</h1>
+                            <ul class="txt-der flex-colum gap-5">
+                                <li class="flex gap-5">
+                                    <img class="mw-ico-1" src="./img/Check_green_circle.svg" alt="">
+                                    <p>Tortas para festejar San Valentín</p>
+                                </li>
+                                <li class="flex gap-5">
+                                    <img class="mw-ico-1" src="./img/Check_green_circle.svg" alt="">
+                                    <p>Tortas de Flork para dedicar</p>
+                                </li>
+                                <li class="flex gap-5">
+                                    <img class="mw-ico-1" src="./img/Check_green_circle.svg" alt="">
+                                    <p>Modelos Exclusivos por tiempo Limitado</p>
+                                </li>
+                                <li class="flex gap-5">
+                                    <img class="mw-ico-1" src="./img/Check_green_circle.svg" alt="">
+                                    <p>Ordena tu torta hasta el 12 de Febrero</p>
+                                </li>
+                            </ul>
+                            <a class="padhor-1-2 border20 bg-verd border3px f-bold w-maxc" href="#modelos">Ver modelos</a>
+                        </div>
+                        <div class="rel flex-c w100 order--1">
+                            <div class="mw-320 aspect-1 bg-1 h320 bordercircular abs"></div>
+                            <img class="w100 mw-480 zindex1" src="./img/torta-modello11.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="padsup-2 flex-c mgauto bg-1 rel" alt="sgtSORTEO">
+            <div class="padhor-1 pdngbot3 mw-52 mgauto txt-centro ">
+                <!-- contenido -->
+                <div class="w100 pdngbot2 border20 clr-b">
+                    <!-- contenido Banner -->
+                   <h2>¡Tortas Flork San Valentin!</h2>
+                   <h3 class="f-bold">
+                    🍰 Modelos exclusivos limitados 💖
+                    <br>¿Listo para sorprender?</h3>
+                </div>
+            </div>
+            <div class="abs flex-c-resp bg-b mw-580 w90 bot-1_25 gap1 flex-centro padding1 border20">
+                <!-- conteo -->
+                        <div class="w100 flex-colum gap-5" id="clockdiv">
+                             <h3 class="time_messege "><b>Disponible hasta: </b>
+                             </h3>
+                            <div class="flex-centro gap-5">
+                                <div class="bg-3 padding03 border05">
+                                   <div class="smalltext text-capitalize">Días</div>
+                                   <span class="days "></span>
+                                </div>
+                                <div class="bg-3 padding03 border05">
+                                   <div class="smalltext text-capitalize">Horas</div>
+                                   <span class="hours "></span>
+                                </div>
+                                <div class="bg-3 padding03 border05">
+                                   <div class="smalltext text-capitalize ">Min</div>
+                                   <span class="minutes "></span>
+                                </div>
+                                <div class="bg-3 padding03 border05">
+                                   <div class="smalltext text-capitalize ">Seg</div>
+                                   <span class="seconds "></span>
+                                </div>
+                                
+                            </div>
+                            <!-- <div><a href="#" class="footr_buy font_Inter_Black">BUY NOW</a></div> -->
+                        </div>
+              
+              <!-- conteo -->
+            </div>
+        </section>
+        <section class="pad-section1 mgauto bg-g1" id="">
+            <div class="padhor-1 clr-1 txt-centro mw-52 mgauto flex-colum gap1">
+                <h2 class="">Medios de pago</h2>
+                <p>aceptamos los siguiente métodos de pago</p>
+                <div class="flex-w flex-centro mgauto gap1">
+                    <div class="bg-plin mw-ico-4 padding05 border20">
+                        <img class="w100" src="./img/mediosdepago/plin-logo.png" alt="">
+                    </div>
+                    <div class="bg-yape mw-ico-4 padding05 border20">
+                        <img class="w100" src="./img/mediosdepago/yape-logo.png" alt="">
+                    </div>
+                    <div class="mw-120">
+                        <svg class="w100" version="1.1" id="Layer_1" xmlns:x="&amp;ns_extend;" xmlns:i="&amp;ns_ai;" xmlns:graph="&amp;ns_graphs;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 104.6 34.2" style="enable-background:new 0 0 104.6 34.2;" xml:space="preserve">
+                            <style type="text/css">
+                                .stint0{display:none;}
+                                .stint1{display:inline;fill:#004B8D;}
+                                .stint2{display:inline;}
+                                .stint3{fill:#004B8D;}
+                                .stint4{fill:#E36225;}
+                                .stint5{fill:#00A24F;}
+                                .stint6{fill:#0060A9;}
+                            </style>
+                            
+                                <g>
+                                    <g class="stint0">
+                                        <path class="stint1" d="M44.9,12.6c-0.1-2.5-1.2-3.8-4.8-4.3c-3.6-0.5-7.6,0.2-7.6,0.2s-2.7,11.7-2.9,12.9c-0.3,1.2-0.6,3.3,1.2,4.3
+                                            c0.6,0.3,5.3,0.4,6.8,0.4c1.5,0,3.4-0.8,4.8-2.2c1.4-1.4,1.8-4.4,0.8-5.8c-0.9-1.2-2.4-1.5-2.4-1.5S45,15.5,44.9,12.6z
+                                             M37.6,22.8c-1.4,0.5-4,0.2-4,0.2l1-4.9c2.4-0.2,4.2,0.3,4.7,1.4C39.8,20.6,39,22.3,37.6,22.8z M39.5,14.8
+                                            c-1.3,0.9-4.1,0.4-4.1,0.4l0.8-4c0,0,1.5-0.1,2.2-0.1C41.6,11.4,40.8,13.9,39.5,14.8z"></path>
+                                        <path class="stint1" d="M61,12.8c0,0,0.6-1.8,0.7-2.6c0.1-0.8-1.8-1.9-3.5-2.2c-1.8-0.2-6.5-0.4-9.2,2.9c-2.7,3.3-3.9,7.5-2.3,11.7
+                                            c1.6,4.1,6.7,4.6,11.1,3.1c0.9-0.3,1.1-4.1,1.1-4.1s-3.6,3.1-6.9,0.5c-3.3-2.6-0.7-9.5,2.8-10.3C58.3,10.9,61,12.8,61,12.8z"></path>
+                                        <path class="stint1" d="M75.6,10.2c-1.2-1.6-3.7-1.9-5.8-1.9c-2.1,0-5.6,0.4-5.6,0.4l-3.9,17.7c0,0,2.9-0.1,3.3-0.2
+                                            c0.4,0,1.1-0.3,1.6-2.3c0.4-2,0.7-3.5,0.7-3.5s2.9,0.2,4.9-0.2c2-0.4,4.4-1.9,5.2-4C76.7,14.3,76.8,11.7,75.6,10.2z M72.8,14.1
+                                            c-0.2,2.3-2.9,3.3-4.3,3.3c-1.4,0-1.5-0.4-1.5-0.7c0-0.3,1.2-5.4,1.2-5.4C71.4,11,73,11.8,72.8,14.1z"></path>
+                                        <g class="stint2">
+                                            <g>
+                                                <path class="stint3" d="M21.5,9.5c3.3,1.8,1.1,6.5,1.1,6.5c-1.4-1.7-5.2-3.5-5.2-3.5S19.4,9,21.5,9.5z"></path>
+                                            </g>
+                                            <g>
+                                                <path class="stint4" d="M27.6,14.6c0.7,1,0.8,2.8-0.2,4.4c-1.1,1.6-4.1,3.9-5.1,4.6c-1,0.7-1.8,1.5-3.8,1.3
+                                                    c-2-0.2-3.1-2.5-3.1-2.5s1.4-0.6,3.5-2c1.2-0.8,2.2-1.8,2.9-2.7c0.5-0.8,0.9-1.6,0.9-1.6s2.2-4.7-1.1-6.5c0,0,0.1,0,0.1,0
+                                                    C23.7,10.2,26.9,13.6,27.6,14.6z"></path>
+                                            </g>
+                                        </g>
+                                        <g class="stint2">
+                                            <g>
+                                                <g>
+                                                    <path class="stint3" d="M82.7,9.5c3.3,1.8,1.1,6.5,1.1,6.5c-1.4-1.7-5.2-3.5-5.2-3.5S80.6,9,82.7,9.5z"></path>
+                                                </g>
+                                            </g>
+                                            <g>
+                                                <path class="stint4" d="M88.8,14.6c0.7,1,0.8,2.8-0.2,4.4c-1.1,1.6-4.1,3.9-5.1,4.6c-1,0.7-1.8,1.5-3.8,1.3
+                                                    c-2-0.2-3.1-2.5-3.1-2.5s1.4-0.6,3.5-2c1.2-0.8,2.2-1.8,2.9-2.7c0.5-0.8,0.9-1.6,0.9-1.6s2.2-4.7-1.1-6.5c0,0,0.1,0,0.1,0
+                                                    C84.9,10.2,88.1,13.6,88.8,14.6z"></path>
+                                            </g>
+                                        </g>
+                                    </g>
+                                    <g>
+                                        <path class="stint5" d="M51.6,13.5c-2.9,0-4.9,2.1-4.9,5.4c0,3.1,2.5,5,5,5c1.5,0,2.4-0.2,3-0.7v-1.7c-0.8,0.3-1.6,0.5-2.5,0.5
+                                            c-1.5,0-2.8-0.8-3-2.2l0-0.1h1.8c1.7,0,2.9-0.2,3.6-0.5s1.1-0.9,1.1-1.8C55.6,14.9,53.6,13.5,51.6,13.5 M52.7,17.9
+                                            c-0.5,0.2-1.2,0.2-2.4,0.2H49V18l0-0.3c0.1-1.2,1-2.3,2.3-2.3c0.5,0,1,0.1,1.5,0.4c0.4,0.3,0.6,0.7,0.6,1.2
+                                            C53.4,17.4,53.2,17.7,52.7,17.9 M56.8,17.4v6.4h2.4v-5.9c0-0.8,0.2-1.4,0.5-1.7c0.3-0.4,0.8-0.5,1.4-0.5c0.2,0,0.4,0,0.6,0.1
+                                            v-1.9c-0.4-0.2-0.8-0.3-1.2-0.3C57.9,13.5,56.8,15.3,56.8,17.4 M28,23.7V10.9h-2.4v12.8H28z M34.4,13.5c-3.2,0-4.5,2.2-4.5,4.3v6
+                                            h2.4v-5.8c0-0.6,0.2-1.3,0.5-1.8c0.4-0.4,0.9-0.7,1.4-0.6c0.7,0,1.2,0.2,1.6,0.6c0.4,0.4,0.6,1.1,0.6,2v5.6h2.4v-5.9
+                                            C38.7,15,36.8,13.5,34.4,13.5 M42.9,10.9h-2.3v9.3c0,2.4,1.2,3.7,3.8,3.8c1.1,0,1.7-0.4,2-0.9v-1.5c-0.4,0.2-1,0.3-1.7,0.3
+                                            c-0.5,0-1-0.1-1.3-0.5s-0.5-0.8-0.5-1.5v-4.3h2.1c1,0,1.4-0.6,1.4-1.1v-0.9h-3.5V10.9z M87.5,13.5c-3.2,0-4.5,2.2-4.5,4.3l0,6
+                                            h2.3v-5.8c0-0.8,0.2-1.3,0.5-1.8c0.4-0.4,0.9-0.7,1.4-0.6c0.7,0,1.2,0.2,1.6,0.6c0.4,0.4,0.6,1.1,0.6,2v5.6h2.3v-5.9
+                                            C91.9,15,89.9,13.5,87.5,13.5 M68,13.5c-1.3,0-2.2,0.8-2.6,1.5l-0.2,0.3v-4.4h-2.3v8c0,3.4,2,5.1,4.7,5.1c3,0,4.9-2.4,4.9-5.4
+                                            C72.4,15.5,70.5,13.5,68,13.5 M67.7,21.9c-0.8,0-1.5-0.2-1.9-0.8c-0.5-0.6-0.7-1.4-0.7-2.6c0-1.6,1-3,2.3-3
+                                            c0.8,0,1.4,0.2,1.9,0.8c0.4,0.6,0.7,1.4,0.7,2.7C70,20.6,69.1,21.9,67.7,21.9 M77.2,13.5c-1.4,0-2.4,0.4-3,0.9V16
+                                            c0.8-0.4,1.7-0.6,2.6-0.6c0.8,0,1.4,0.1,1.8,0.4c0.4,0.3,0.6,0.8,0.6,1.6v0.2h-1c-3.8,0-5,1.3-5,3.1c0,1.8,1.6,3.1,4,3.1h0.5
+                                            c2.2,0,3.8-1.4,3.8-3.6V18C81.5,14.4,79.5,13.5,77.2,13.5 M79.3,20.4c0,0.5-0.1,1-0.4,1.3c-0.3,0.3-0.7,0.4-1.3,0.4
+                                            c-0.5,0-1-0.1-1.4-0.4c-0.3-0.2-0.5-0.6-0.5-1c0-0.4,0.2-0.8,0.6-1.1c0.4-0.2,1.1-0.3,2-0.3h1V20.4z M98.6,18.4L98.6,18.4v-0.1
+                                            c1-1.3,3.3-3.8,4.1-4.6h-1.3c-0.8,0-1.4,0.1-2,0.6c-1.2,1.1-2.2,2.4-3.1,3.7l-0.2,0.3l0-7.4h-2.4v12.8h2.4v-5.2l0.2,0.3
+                                            c1.1,1.5,2.3,3,3.6,4.4c0.4,0.4,1,0.7,1.6,0.7c0.7,0,1-0.2,1.3-0.5C102.1,22.5,99.4,19.4,98.6,18.4"></path>
+                                        <path class="stint6" d="M4.3,8.1c-1.3,0-2.4,1.1-2.4,2.5v15.9h15.9c1.4,0,2.5-1.1,2.5-2.5V8.1H4.3z M15.9,21.4l-9.8,1.8v-9.9
+                                            l9.8-1.8V21.4z"></path>
+                                    </g>
+                                </g>
+                            </svg>
+                    </div>
+                    <div class="mw-100">
+                        <svg class="w100" version="1.1" id="Layer_1" xmlns:x="&amp;ns_extend;" xmlns:i="&amp;ns_ai;" xmlns:graph="&amp;ns_graphs;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 75.3 34.2" style="enable-background:new 0 0 75.3 34.2;" xml:space="preserve">
+                            <style type="text/css">
+                              .stbcp{fill:#004B8D;}
+                              .stbcp1{fill:#E36225;}
+                            </style>
+                              <g>
+                                <g>
+                                  <path class="stbcp" d="M30.3,12.6c-0.1-2.5-1.2-3.8-4.8-4.3c-3.6-0.5-7.6,0.2-7.6,0.2S15.2,20.2,15,21.5c-0.3,1.2-0.6,3.3,1.2,4.3
+                                    c0.6,0.3,5.3,0.4,6.8,0.4c1.5,0,3.4-0.8,4.8-2.2c1.4-1.4,1.8-4.4,0.8-5.8c-0.9-1.2-2.4-1.5-2.4-1.5S30.4,15.5,30.3,12.6z
+                                     M23,22.8c-1.4,0.5-4,0.2-4,0.2l1-4.9c2.4-0.2,4.2,0.3,4.7,1.4C25.1,20.6,24.4,22.3,23,22.8z M24.9,14.8
+                                    c-1.3,0.9-4.1,0.4-4.1,0.4l0.8-4c0,0,1.5-0.1,2.2-0.1C27,11.4,26.1,13.9,24.9,14.8z"></path>
+                                  <path class="stbcp" d="M46.4,12.8c0,0,0.6-1.8,0.7-2.6c0.1-0.8-1.8-1.9-3.5-2.2c-1.8-0.2-6.5-0.4-9.2,2.9
+                                    c-2.7,3.3-3.9,7.5-2.3,11.7c1.6,4.1,6.7,4.6,11.1,3.1c0.9-0.3,1.1-4.1,1.1-4.1s-3.6,3.1-6.9,0.5c-3.3-2.6-0.7-9.5,2.8-10.3
+                                    C43.7,10.9,46.4,12.8,46.4,12.8z"></path>
+                                  <path class="stbcp" d="M61,10.2c-1.2-1.6-3.7-1.9-5.8-1.9c-2.1,0-5.6,0.4-5.6,0.4l-3.9,17.7c0,0,2.9-0.1,3.3-0.2
+                                    c0.4,0,1.1-0.3,1.6-2.3c0.4-2,0.7-3.5,0.7-3.5s2.9,0.2,4.9-0.2c2-0.4,4.4-1.9,5.2-4C62.1,14.3,62.1,11.7,61,10.2z M58.1,14.1
+                                    c-0.2,2.3-2.9,3.3-4.3,3.3c-1.4,0-1.5-0.4-1.5-0.7c0-0.3,1.2-5.4,1.2-5.4C56.8,11,58.3,11.8,58.1,14.1z"></path>
+                                  <g>
+                                    <g>
+                                      <path class="stbcp" d="M6.9,9.5c3.3,1.8,1.1,6.5,1.1,6.5c-1.4-1.7-5.2-3.5-5.2-3.5S4.8,9,6.9,9.5z"></path>
+                                    </g>
+                                    <g>
+                                      <path class="stbcp1" d="M12.9,14.6c0.7,1,0.8,2.8-0.2,4.4c-1.1,1.6-4.1,3.9-5.1,4.6c-1,0.7-1.8,1.5-3.8,1.3
+                                        c-2-0.2-3.1-2.5-3.1-2.5s1.4-0.6,3.5-2c1.2-0.8,2.2-1.8,2.9-2.7C7.6,16.8,7.9,16,7.9,16s2.2-4.7-1.1-6.5c0,0,0.1,0,0.1,0
+                                        C9.1,10.2,12.2,13.6,12.9,14.6z"></path>
+                                    </g>
+                                  </g>
+                                  <g>
+                                    <g>
+                                      <g>
+                                        <path class="stbcp" d="M68.1,9.5c3.3,1.8,1.1,6.5,1.1,6.5c-1.4-1.7-5.2-3.5-5.2-3.5S66,9,68.1,9.5z"></path>
+                                      </g>
+                                    </g>
+                                    <g>
+                                      <path class="stbcp1" d="M74.1,14.6c0.7,1,0.8,2.8-0.2,4.4c-1.1,1.6-4.1,3.9-5.1,4.6c-1,0.7-1.8,1.5-3.8,1.3
+                                        c-2-0.2-3.1-2.5-3.1-2.5s1.4-0.6,3.5-2c1.2-0.8,2.2-1.8,2.9-2.7c0.5-0.8,0.9-1.6,0.9-1.6s2.2-4.7-1.1-6.5c0,0,0.1,0,0.1,0
+                                        C70.3,10.2,73.5,13.6,74.1,14.6z"></path>
+                                    </g>
+                                  </g>
+                                </g>
+                              </g>
+                        </svg>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+        <section class="padsup-2 mgauto bg-b" id="modelos">
+            <div class="padhor-1 ">
+                <!-- contenido -->
+                <div class="w100 txt-centro flex-colum flex-centro gap1">
+                    <!-- contenido Banner -->
+                    <h2 class="clr-1">Nuestros Modelos</h2>
+                    <p class="clr-1">Cada me ofrecemos los mejores premios que tenemos para ti</p>
+                    <div class=" mw-72 w100 flex-w flex-c gap1 mgauto mgtp2">
+                        <div class="w100 mw-168-resp bg-3 aspect-1 padsup-1 border20">
+                            <div class="w100 padhor-1 flex-centro gap1 flex-colum ">
+                                <div class="w100 flex-centro aspect-1 bg-g2 border20 padding1">
+                                  <img class="mh-12em"  src="./img/torta-modello1.png" alt="">  
+                                </div>
+                                <div class="padop1 w-maxc f-bold">
+                                    <p class="ftsz-1_4">Modelo 1</p> 
+                                </div>
+                                <div class="flex-spacebetween w100 flex-a">
+                                    <div class="flex-colum">
+                                        <div class="w-auto clr-g3">
+                                            <p class="tachado ftsz0_9 ">S/ 50.00</p> 
+                                        </div>
+                                        <div class="w-maxc f-bold ftsz-1_4">
+                                            S/ 45.00
+                                        </div>    
+                                    </div>
+                                    
+                                    <a href="crearcuenta.html" class="flex gap-75 padop1 w-maxc border20 bg-wsp clr-b">
+                                        <img class="mw-ico-1" src="./img/icono-whastapp.png" alt="">
+                                        <p>Mayor info</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w100 mw-168-resp bg-3 aspect-1 padsup-1 border20">
+                            <div class="w100 padhor-1 flex-centro gap1 flex-colum ">
+                                <div class="w100 flex-centro aspect-1 bg-g2 border20 padding1">
+                                  <img class="mh-12em"  src="./img/torta-modello2.png" alt="">  
+                                </div>
+                                <div class="padop1 w-maxc f-bold">
+                                    <p class="ftsz-1_4">Modelo 2</p>
+                                </div>
+                                <div class="flex-spacebetween w100 flex-a">
+                                    <div class="flex-colum">
+                                        <div class="w-auto clr-g3">
+                                            <p class="tachado ftsz0_9 ">S/ 50.00</p> 
+                                        </div>
+                                        <div class="w-maxc f-bold ftsz-1_4">
+                                            S/ 45.00
+                                        </div>    
+                                    </div>
+                                    
+                                    <a href="crearcuenta.html" class="flex gap-75 padop1 w-maxc border20 bg-wsp clr-b">
+                                        <img class="mw-ico-1" src="./img/icono-whastapp.png" alt="">
+                                        <p>Mayor info</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w100 mw-168-resp bg-3 aspect-1 padsup-1 border20">
+                            <div class="w100 padhor-1 flex-centro gap1 flex-colum ">
+                                <div class="w100 flex-centro aspect-1 bg-g2 border20 padding1">
+                                  <img class="mh-12em"  src="./img/torta-modello3.png" alt="">  
+                                </div>
+                                <div class="padop1 w-maxc f-bold">
+                                    <p class="ftsz-1_4">Modelo 3</p> 
+                                </div>
+                                <div class="flex-spacebetween w100 flex-a">
+                                    <div class="flex-colum">
+                                        <div class="w-auto clr-g3">
+                                            <p class="tachado ftsz0_9 ">S/ 50.00</p> 
+                                        </div>
+                                        <div class="w-maxc f-bold ftsz-1_4">
+                                            S/ 45.00
+                                        </div>    
+                                    </div>
+                                    
+                                    <a href="crearcuenta.html" class="flex gap-75 padop1 w-maxc border20 bg-wsp clr-b">
+                                        <img class="mw-ico-1" src="./img/icono-whastapp.png" alt="">
+                                        <p>Mayor info</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w100 mw-168-resp bg-3 aspect-1 padsup-1 border20">
+                            <div class="w100 padhor-1 flex-centro gap1-5 flex-colum ">
+                                <div class="w100 flex-centro aspect-1 bg-g2 border20 padding1">
+                                  <img class="mh-12em"  src="./img/torta-modello4.png" alt="">  
+                                </div>
+                                <div class="padop1 w-maxc f-bold">
+                                    <p class="ftsz-1_4">Modelo 4</p>
+                                </div>
+                                <div class="flex-spacebetween w100 flex-a">
+                                    <div class="flex-colum">
+                                        <div class="w-auto clr-g3">
+                                            <p class="tachado ftsz0_9 ">S/ 50.00</p> 
+                                        </div>
+                                        <div class="w-maxc f-bold ftsz-1_4">
+                                            S/ 45.00
+                                        </div>    
+                                    </div>
+                                    
+                                    <a href="crearcuenta.html" class="flex gap-75 padop1 w-maxc border20 bg-wsp clr-b">
+                                        <img class="mw-ico-1" src="./img/icono-whastapp.png" alt="">
+                                        <p>Mayor info</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w100 mw-168-resp bg-3 aspect-1 padsup-1 border20">
+                            <div class="w100 padhor-1 flex-centro gap1-5 flex-colum ">
+                                <div class="w100 flex-centro aspect-1 bg-g2 border20 padding1">
+                                  <img class="mh-12em"  src="./img/torta-modello5.png" alt="">  
+                                </div>
+                                <div class="padop1 w-maxc f-bold">
+                                    <p class="ftsz-1_4">Modelo 5</p> 
+                                </div>
+                                <div class="flex-spacebetween w100 flex-a">
+                                    <div class="flex-colum">
+                                        <div class="w-auto clr-g3">
+                                            <p class="tachado ftsz0_9 ">S/ 50.00</p> 
+                                        </div>
+                                        <div class="w-maxc f-bold ftsz-1_4">
+                                            S/ 45.00
+                                        </div>    
+                                    </div>
+                                    
+                                    <a href="crearcuenta.html" class="flex gap-75 padop1 w-maxc border20 bg-wsp clr-b">
+                                        <img class="mw-ico-1" src="./img/icono-whastapp.png" alt="">
+                                        <p>Mayor info</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w100 mw-168-resp bg-3 aspect-1 padsup-1 border20">
+                            <div class="w100 padhor-1 flex-centro gap1-5 flex-colum ">
+                                <div class="w100 flex-centro aspect-1 bg-g2 border20 padding1">
+                                  <img class="mh-12em"  src="./img/torta-modello6.png" alt="">  
+                                </div>
+                                <div class="padop1 w-maxc f-bold">
+                                    <p class="ftsz-1_4">Modelo 6</p>
+                                </div>
+                                <div class="flex-spacebetween w100 flex-a">
+                                    <div class="flex-colum">
+                                        <div class="w-auto clr-g3">
+                                            <p class="tachado ftsz0_9 ">S/ 50.00</p> 
+                                        </div>
+                                        <div class="w-maxc f-bold ftsz-1_4">
+                                            S/ 45.00
+                                        </div>    
+                                    </div>
+                                    
+                                    <a href="crearcuenta.html" class="flex gap-75 padop1 w-maxc border20 bg-wsp clr-b">
+                                        <img class="mw-ico-1" src="./img/icono-whastapp.png" alt="">
+                                        <p>Mayor info</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w100 mw-168-resp bg-3 aspect-1 padsup-1 border20">
+                            <div class="w100 padhor-1 flex-centro gap1 flex-colum ">
+                                <div class="w100 flex-centro aspect-1 bg-g2 border20 padding1">
+                                  <img class="mh-12em"  src="./img/torta-modello7.png" alt="">  
+                                </div>
+                                <div class="padop1 w-maxc f-bold">
+                                    <p class="ftsz-1_4">Modelo 7</p>
+                                </div>
+                                <div class="flex-spacebetween w100 flex-a">
+                                    <div class="flex-colum">
+                                        <div class="w-auto clr-g3">
+                                            <p class="tachado ftsz0_9 ">S/ 50.00</p> 
+                                        </div>
+                                        <div class="w-maxc f-bold ftsz-1_4">
+                                            S/ 45.00
+                                        </div>    
+                                    </div>
+                                    
+                                    <a href="crearcuenta.html" class="flex gap-75 padop1 w-maxc border20 bg-wsp clr-b">
+                                        <img class="mw-ico-1" src="./img/icono-whastapp.png" alt="">
+                                        <p>Mayor info</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w100 mw-168-resp bg-3 aspect-1 padsup-1 border20">
+                            <div class="w100 padhor-1 flex-centro gap1-5 flex-colum ">
+                                <div class="w100 flex-centro aspect-1 bg-g2 border20 padding1">
+                                  <img class="mh-12em"  src="./img/torta-modello8.png" alt="">  
+                                </div>
+                                <div class="padop1 w-maxc f-bold">
+                                    <p class="ftsz-1_4">Modelo 8</p> 
+                                </div>
+                                <div class="flex-spacebetween w100 flex-a">
+                                    <div class="flex-colum">
+                                        <div class="w-auto clr-g3">
+                                            <p class="tachado ftsz0_9 ">S/ 50.00</p> 
+                                        </div>
+                                        <div class="w-maxc f-bold ftsz-1_4">
+                                            S/ 45.00
+                                        </div>    
+                                    </div>
+                                    
+                                    <a href="crearcuenta.html" class="flex gap-75 padop1 w-maxc border20 bg-wsp clr-b">
+                                        <img class="mw-ico-1" src="./img/icono-whastapp.png" alt="">
+                                        <p>Mayor info</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w100 mw-168-resp bg-3 aspect-1 padsup-1 border20">
+                            <div class="w100 padhor-1 flex-centro gap1-5 flex-colum ">
+                                <div class="w100 flex-centro aspect-1 bg-g2 border20 padding1">
+                                  <img class="mh-12em"  src="./img/torta-modello9.png" alt="">  
+                                </div>
+                                <div class="padop1 w-maxc f-bold">
+                                    <p class="ftsz-1_4">Modelo 9</p>
+                                </div>
+                                <div class="flex-spacebetween w100 flex-a">
+                                    <div class="flex-colum">
+                                        <div class="w-auto clr-g3">
+                                            <p class="tachado ftsz0_9 ">S/ 50.00</p> 
+                                        </div>
+                                        <div class="w-maxc f-bold ftsz-1_4">
+                                            S/ 45.00
+                                        </div>    
+                                    </div>
+                                    
+                                    <a href="crearcuenta.html" class="flex gap-75 padop1 w-maxc border20 bg-wsp clr-b">
+                                        <img class="mw-ico-1" src="./img/icono-whastapp.png" alt="">
+                                        <p>Mayor info</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w100 mw-168-resp bg-3 aspect-1 padsup-1 border20">
+                            <div class="w100 padhor-1 flex-centro gap1-5 flex-colum ">
+                                <div class="w100 flex-centro aspect-1 bg-g2 border20 padding1">
+                                  <img class="mh-12em"  src="./img/torta-modello10.png" alt="">  
+                                </div>
+                                <div class="padop1 w-maxc f-bold">
+                                    <p class="ftsz-1_4">Modelo 10</p> 
+                                </div>
+                                <div class="flex-spacebetween w100 flex-a">
+                                    <div class="flex-colum">
+                                        <div class="w-auto clr-g3">
+                                            <p class="tachado ftsz0_9 ">S/ 50.00</p> 
+                                        </div>
+                                        <div class="w-maxc f-bold ftsz-1_4">
+                                            S/ 45.00
+                                        </div>    
+                                    </div>
+                                    
+                                    <a href="crearcuenta.html" class="flex gap-75 padop1 w-maxc border20 bg-wsp clr-b">
+                                        <img class="mw-ico-1" src="./img/icono-whastapp.png" alt="">
+                                        <p>Mayor info</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w100 mw-168-resp bg-3 aspect-1 padsup-1 border20">
+                            <div class="w100 padhor-1 flex-centro gap1-5 flex-colum ">
+                                <div class="w100 flex-centro aspect-1 bg-g2 border20 padding1">
+                                  <img class="mh-12em"  src="./img/torta-modello11.png" alt="">  
+                                </div>
+                                <div class="padop1 w-maxc f-bold">
+                                    <p class="ftsz-1_4">Modelo 11</p>
+                                </div>
+                                <div class="flex-spacebetween w100 flex-a">
+                                    <div class="flex-colum">
+                                        <div class="w-auto clr-g3">
+                                            <p class="tachado ftsz0_9 ">S/ 50.00</p> 
+                                        </div>
+                                        <div class="w-maxc f-bold ftsz-1_4">
+                                            S/ 45.00
+                                        </div>    
+                                    </div>
+                                    
+                                    <a href="crearcuenta.html" class="flex gap-75 padop1 w-maxc border20 bg-wsp clr-b">
+                                        <img class="mw-ico-1" src="./img/icono-whastapp.png" alt="">
+                                        <p>Mayor info</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="padvert3 mgauto bg-g1" id="">
+            <div class="padhor-1 clr-1 txt-centro mw-52 mgauto flex-colum gap1">
+                <h2 class="">Miles de peruanos ya tienen su SIM Corporativo con Chapa tu plan</h2>
+                <p>Tienen una amplia facilidad de pagos e increíbles premios mensuales</p>
+                <div class="flex-w flex-centro gap1">
+                    <div class="mw-ico-5 aspect-1 bg-1 bordercircular clr-b flex-centro">s</div>
+                    <div class="mw-ico-5 aspect-1 bg-1 bordercircular clr-b flex-centro">s</div>
+                    <div class="mw-ico-5 aspect-1 bg-1 bordercircular clr-b flex-centro">s</div>
+                    
+                </div>
+            </div>
+        </section>
+        <section class="padvert3 mgauto " id="">
+            <div class="w100 mw-720 mgauto rel flex-colum gap1 flex-centro padding3 minh-270">
+                <div class="border20 abs lef0 right0 minh-270 zindex0">
+                    <div class="abs w100 h100 zindex1 lef0 right0 border20" style="background-color: #40404094;"></div>
+                    <img class="w100 abs lef0 right0 zindex0 border20" src="https://www.payjoy.com/pe/wp-content/uploads/sites/9/2022/03/testimonio-1060x395.jpg" alt="">
+                </div>
+                <h3 class="zindex1 clr-b">PREGUNTAMOS A NUESTROS CLIENTES QUE LES PARECE EL SERVICIO</h3>
+                
+                <a id="openModalBtn" class="zindex1 clr-b">Ver video</a>
+            </div>
+        </section>
+        <section class="padsup-2 mgauto bg-g4">
+            <div class="padhor-1 ">
+                <!-- contenido -->
+                <div class="w100 border20 mw-72 mgauto txt-centro">
+                    <!-- contenido Banner -->
+                    <h2 class="clr-b">Preguntas Frecuentes</h2>
+                    <div class="w100 mgauto rel flex-colum gap1 mgtp2 sombra">
+            
+                        <div class="topic bg-b border2px brdclr-n padding1">
+                            <div class="open">
+                              <p class="question">¿Cómo funciona el sorteo mensual?</p>
+                              <span class="faq-t"></span>
+                            </div>
+                            <p class="answer">Nuestro sorteo mensual es sencillo. Al suscribirte, recibirás automáticamente una o más participaciones, dependiendo de tu plan. Durante el sorteo mensual, seleccionamos aleatoriamente a un ganador de entre todos los participantes.</p>
+                          </div>
+                       
+                          <div class="topic bg-b border2px brdclr-n padding1">
+                            <div class="open">
+                            <p class="question">¿Cuáles son los premios disponibles?
+                        </p><span class="faq-t"></span>
+                            </div>
+                            <p class="answer">Los premios varían cada mes e incluyen celulares de última generación, motocicletas, automóviles, electrodomésticos y más. Puedes encontrar información detallada sobre los premios actuales en nuestra página principal.</p>
+                          </div>
+                          <div class="topic bg-b border2px brdclr-n padding1">
+                            <div class="open">
+                            <p class="question">¿Cómo me suscribo?
+                        </p><span class="faq-t"></span>
+                            </div>
+                            <p class="answer">Es fácil. Visita nuestra sección de <a href="#seccion-suscripcion">suscripción</a>, elige el plan que más te convenga y sigue los pasos para completar el proceso de suscripción. Una vez suscrito, estás automáticamente participando en el próximo sorteo.</p>
+                          </div>
+                       
+                      </div>
+                </div>
+            </div>
+        </section>
+        <div id="videoModal" class="modalvideo">
+            <div class="modalvideo-content">
+                <span id="closeModalBtn" class="closevideo">&times;</span>
+                <iframe id="videoIframe" src="https://www.youtube.com/embed/-JjTcZGkNdI?si=WobPPWrbl-hc2eGC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+        </div>
+    </main>
+    <!-- estrutctura general -->
+    
+    <!-- navegador mobil -->
+    <!-- navegador mobil -->
+    <!-- modals -->
+    <!-- scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="./js/countdown.js"></script>
+    <script src="./js/modal.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.js"></script>
+    <script>
+        //Create function to select elements
+        //Open and close nav on click
+        const menuIcon = document.querySelector(".menu-icons");
+        menuIcon.addEventListener("click", () => {
+            console.log("OK");
+            const nav = document.getElementsByTagName("nav")[0];
+            nav.classList.toggle("active");
+        });
+        
+    </script>
+    <script>
+        $(".open").click( function () {
+        var container = $(this).parents(".topic");
+        var answer = container.find(".answer");
+        var trigger = container.find(".faq-t");
+            
+        answer.slideToggle(200);
+            
+        if (trigger.hasClass("faq-o")) {
+        trigger.removeClass("faq-o");
+        }
+        else {
+        trigger.addClass("faq-o");
+        }
+
+        if (container.hasClass("expanded")) {
+        container.removeClass("expanded");
+        }
+        else {
+        container.addClass("expanded");
+        }
+        });
+    </script>
+    <script>
+        document.getElementById('openModalBtn').addEventListener('click', function() {
+    document.getElementById('videoModal').style.display = 'flex';
+});
+
+document.getElementById('closeModalBtn').addEventListener('click', function() {
+    document.getElementById('videoModal').style.display = 'none';
+});
+
+window.addEventListener('click', function(event) {
+    var modalvideo = document.getElementById('videoModal');
+    if (event.target === modalvideo) {
+        modalvideo.style.display = 'none';
+    }
+});
+
+    </script>
+</body>
+</html>
